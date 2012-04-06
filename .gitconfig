@@ -13,7 +13,7 @@
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	whitespace = fix,space-before-tab,tab-in-indent,trailing-space
-	autocrlf = true
+	autocrlf = input
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
 	ui = auto
