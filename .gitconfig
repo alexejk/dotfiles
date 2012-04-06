@@ -1,10 +1,21 @@
+[alias]
+    # View the SHA, description, and history graph of the latest 20 commits
+	l = log --pretty=oneline -n 20 --graph
+    co = checkout
+    ci = commit
+    rb = rebase
+    #Ammend last push
+    undopush = push -f origin HEAD^:master
 [apply]
+    # Detect whitespace errors when applying a patch
 	whitespace = fix
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	whitespace = fix,space-before-tab,tab-in-indent,trailing-space
+	autocrlf = true
 [color]
+	# Use colors in Git commands that are capable of colored output when outputting to the terminal
 	ui = auto
 [color "branch"]
 	current = yellow reverse
@@ -20,7 +31,15 @@
 	changed = green
 	untracked = cyan
 [merge]
+	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+
+# Use `origin` as the default remote on the `master` branch in all cases
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+
+# URL shorthands
 [url "git@github.com:"]
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
@@ -33,3 +52,5 @@
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
+[include]
+    path = .gitcredentials

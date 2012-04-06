@@ -1,11 +1,14 @@
 # Java and Tomcat home
 export JAVA_HOME=/Library/Java/Home
 export CATALINA_HOME=/Library/Tomcat/Home
+export NODE_PATH=/usr/local/lib/node_modules
 
 # Make vim the default editor
-export EDITOR="nano"
+export EDITOR="mate"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
