@@ -4,7 +4,7 @@ export CATALINA_HOME=/Library/Tomcat/Home
 export NODE_PATH=/usr/local/lib/node_modules
 
 # Make vim the default editor
-export EDITOR="mate"
+export EDITOR="/usr/local/bin/mate -w"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 # Highlight section titles in manual pages
@@ -19,3 +19,4 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:ls *"
 
 export PATH=/usr/local/bin:$PATH
+export GEM_HOME=/usr/local/Cellar/gems/1.8
