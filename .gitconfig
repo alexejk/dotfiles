@@ -4,6 +4,16 @@
     co = checkout
     ci = commit
     rb = rebase
+	# View the current working tree status using the short format
+	s = status -s
+	# Diff
+	d = diff --patch-with-stat
+	# Pull in remote changes for the current repository and all its submodules
+	p = !"git pull; git submodule foreach git pull origin master"
+	# Clone a repository including all submodules
+	c = clone --recursiv
+	# Commit all changes
+	ca = !git add . && git add -u && git commit -a
     #Ammend last push
     undopush = push -f origin HEAD^:master
 [apply]
