@@ -15,7 +15,7 @@
 	# Commit all changes
 	ca = !git add . && git add -u && git commit -a
     #Ammend last push
-    undopush = push -f origin HEAD^:master
+    #undopush = push -f origin HEAD^:master
 [apply]
     # Detect whitespace errors when applying a patch
 	whitespace = fix
