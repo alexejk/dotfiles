@@ -18,5 +18,5 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *"
 
-export PATH=/usr/local/bin:$PATH
 export GEM_HOME=/usr/local/Cellar/gems/1.8
+export PATH=/usr/local/bin:$PATH:$GEM_HOME
