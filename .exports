@@ -2,6 +2,7 @@
 export JAVA_HOME=/Library/Java/Home
 export CATALINA_HOME=/Library/Tomcat/Home
 export NODE_PATH=/usr/local/lib/node_modules
+export AAS_CONFIG_DIR=/conf
 
 # Make vim the default editor
 export EDITOR="/usr/local/bin/mate -w"
