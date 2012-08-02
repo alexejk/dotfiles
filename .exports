@@ -20,4 +20,4 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:ls *"
 
 export GEM_HOME=/usr/local/Cellar/gems/1.8
-export PATH=/usr/local/bin:$PATH:$GEM_HOME
+export PATH=/usr/local/bin:$PATH:$GEM_HOME/bin
