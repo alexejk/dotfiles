@@ -23,3 +23,7 @@ export GEM_HOME=/usr/local/Cellar/gems/1.8
 export PATH=/usr/local/bin:$PATH:$GEM_HOME/bin
 
 export MAVEN_OPTS='-Xmx1024m -XX:MaxPermSize=512m'
+
+launchctl setenv PATH $PATH
+launchctl setenv AAS_CONFIG_DIR $AAS_CONFIG_DIR
+launchctl setenv MAVEN_OPTS $MAVEN_OPTS
