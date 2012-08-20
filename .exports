@@ -1,6 +1,7 @@
 # Java and Tomcat home
 export JAVA_HOME=/Library/Java/Home
 export CATALINA_HOME=/Library/Tomcat/Home
+export TOMCAT_HOME=$CATALINA_HOME
 export NODE_PATH=/usr/local/lib/node_modules
 export AAS_CONFIG_DIR=/conf
 
@@ -27,3 +28,6 @@ export MAVEN_OPTS='-Xmx1024m -XX:MaxPermSize=512m'
 launchctl setenv PATH $PATH
 launchctl setenv AAS_CONFIG_DIR $AAS_CONFIG_DIR
 launchctl setenv MAVEN_OPTS $MAVEN_OPTS
+launchctl setenv TOMCAT_HOME $TOMCAT_HOME
+launchctl setenv CATALINA_HOME $CATALINA_HOME
+launchctl setenv JAVA_HOME $JAVA_HOME
