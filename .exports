@@ -4,6 +4,7 @@ export CATALINA_HOME=/Library/Tomcat/Home
 export TOMCAT_HOME=$CATALINA_HOME
 export NODE_PATH=/usr/local/lib/node_modules
 export AAS_CONFIG_DIR=/conf
+export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/r20.0.3
 
 # Make vim the default editor
 export EDITOR="/usr/local/bin/mate -w"
@@ -28,3 +29,4 @@ export MAVEN_OPTS="-Xss4m -Xmx2048m -Xms2048m -XX:MaxPermSize=1024m -XX:PermSize
 launchctl setenv PATH $PATH
 launchctl setenv AAS_CONFIG_DIR $AAS_CONFIG_DIR
 launchctl setenv MAVEN_OPTS "$MAVEN_OPTS"
+launchctl setenv ANDROID_SDK_ROOT "$ANDROID_SDK_ROOT"

@@ -21,8 +21,8 @@ fi
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# Get OS X Software Updates, update Homebrew itself, and upgrade installed Homebrew packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
+# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; npm update npm -g; npm update -g; gem update --system; gem update'
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
@@ -57,6 +57,9 @@ alias m="mate ."
 alias gco="git co"
 alias gci="git ci"
 alias grb="git rb"
+
+# Clean up LaunchServices to remove duplicates in the “Open With” menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
 # File size
 alias fs="stat -f \"%z bytes\""
