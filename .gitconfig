@@ -1,7 +1,7 @@
 [alias]
     # View the SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph
-	co = !git checkout $1 && git submodule update
+	co = checkout
     ci = commit
     rb = rebase
 	# View the current working tree status using the short format
@@ -14,6 +14,10 @@
 	c = clone --recursiv
 	# Commit all changes
 	ca = !git add . && git add -u && git commit -a
+	# Edit files with conflicts
+	edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; mate `f`"
+	# Add conflicted files
+	add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
     #Ammend last push
     #undopush = push -f origin HEAD^:master
 [apply]
