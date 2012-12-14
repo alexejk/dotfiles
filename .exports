@@ -25,6 +25,7 @@ export GEM_HOME=/usr/local/Cellar/gems/1.8
 export PATH=/usr/local/bin:$PATH:$GEM_HOME/bin
 
 export MAVEN_OPTS="-Xss4m -Xmx2048m -Xms2048m -XX:MaxPermSize=1024m -XX:PermSize=1024m"
+export GRADLE_OPTS="-Xss4m -Xmx2048m -Xms2048m -XX:MaxPermSize=1024m -XX:PermSize=1024m"
 
 launchctl setenv PATH $PATH
 launchctl setenv AAS_CONFIG_DIR $AAS_CONFIG_DIR
