@@ -68,3 +68,5 @@
 	insteadOf = "gist:"
 [include]
 	path = .gitcredentials
+[push]
+	default = simple
