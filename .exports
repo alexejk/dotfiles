@@ -5,6 +5,7 @@ export TOMCAT_HOME=$CATALINA_HOME
 export NODE_PATH=/usr/local/lib/node_modules
 export AAS_CONFIG_DIR=/conf
 export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/r20.0.3
+export GRADLE_HOME=/usr/local/Cellar/gradle/1.4
 
 # Make vim the default editor
 export EDITOR="/usr/local/bin/mate -w"
