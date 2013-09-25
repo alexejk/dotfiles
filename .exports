@@ -25,7 +25,13 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 
 # Make some commands not show up in history
-export HISTIGNORE="ls:ls *"
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto"
+
+# Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 export GEM_HOME=/usr/local/Cellar/gems/1.8
 export PATH=/usr/local/bin:$PATH:$GEM_HOME/bin
