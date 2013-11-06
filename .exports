@@ -5,6 +5,7 @@ export TOMCAT_HOME=$CATALINA_HOME
 export NODE_PATH=/usr/local/lib/node_modules
 export AAS_CONFIG_DIR=/conf
 export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/22.3
+export ANDROID_HOME=$ANDROID_SDK_ROOT
 export GRADLE_HOME=/usr/local/Cellar/gradle/1.8/libexec
 
 export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
@@ -43,4 +44,5 @@ launchctl setenv PATH $PATH
 launchctl setenv AAS_CONFIG_DIR $AAS_CONFIG_DIR
 launchctl setenv MAVEN_OPTS "$MAVEN_OPTS"
 launchctl setenv ANDROID_SDK_ROOT "$ANDROID_SDK_ROOT"
+launchctl setenv ANDROID_HOME "$ANDROID_HOME"
 launchctl setenv JAVA_HOME "$JAVA_HOME"
