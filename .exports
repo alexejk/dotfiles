@@ -4,19 +4,21 @@ export CATALINA_HOME=/Library/Tomcat/Home
 export TOMCAT_HOME=$CATALINA_HOME
 export NODE_PATH=/usr/local/lib/node_modules
 export AAS_CONFIG_DIR=/conf
-export ANDROID_SDK_ROOT=$(readlink -f $(dirname $(readlink -f $(which android)))/../)
+export ANDROID_SDK_ROOT=$(readlink -f $(brew --prefix android-sdk))
 export ANDROID_HOME=$ANDROID_SDK_ROOT
-export GRADLE_HOME=$(readlink -f $(dirname $(readlink -f $(which gradle)))/../)
+export GRADLE_HOME=$(readlink -f $(brew --prefix gradle))/libexec
 
 export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
-export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.14.001/libexec"
+export AWS_RDS_HOME="$(readlink -f $(brew --prefix rds-command-line-tools))/libexec"
 
 
 # Make vim the default editor
 export EDITOR="/usr/local/bin/mate -w"
+
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
+
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
 
@@ -34,12 +36,13 @@ export GREP_OPTIONS="--color=auto"
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-export GEM_HOME=/usr/local/Cellar/gems/1.8
-export PATH=/usr/local/bin:$PATH:$GEM_HOME/bin
+export GEM_HOME=/usr/local/Cellar/gems
+export PATH=$PATH:$GEM_HOME/bin
 
 export MAVEN_OPTS="-Xss4m -Xmx2048m -Xms2048m -XX:MaxPermSize=1024m -XX:PermSize=1024m"
 export GRADLE_OPTS="-Xss4m -Xmx2048m -Xms2048m -XX:MaxPermSize=1024m -XX:PermSize=1024m"
 
+#Ensure GUI apps get this
 launchctl setenv PATH $PATH
 launchctl setenv AAS_CONFIG_DIR $AAS_CONFIG_DIR
 launchctl setenv MAVEN_OPTS "$MAVEN_OPTS"

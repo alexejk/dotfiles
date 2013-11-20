@@ -1,5 +1,7 @@
+#!/usr/bin/env bash
+
 # Add `~/bin` to the `$PATH`
-export PATH="/usr/local/sbin:$HOME/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -17,6 +19,13 @@ shopt -s histappend
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
+
+# Enable some Bash 4 features when possible:
+# * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
+# * Recursive globbing, e.g. `echo **/*.txt`
+for option in autocd globstar; do
+        shopt -s "$option" 2> /dev/null
+done
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
