@@ -4,9 +4,9 @@ export CATALINA_HOME=/Library/Tomcat/Home
 export TOMCAT_HOME=$CATALINA_HOME
 export NODE_PATH=/usr/local/lib/node_modules
 export AAS_CONFIG_DIR=/conf
-export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/22.3
+export ANDROID_SDK_ROOT=$(readlink -f $(dirname $(readlink -f $(which android)))/../)
 export ANDROID_HOME=$ANDROID_SDK_ROOT
-export GRADLE_HOME=/usr/local/Cellar/gradle/1.9/libexec
+export GRADLE_HOME=$(readlink -f $(dirname $(readlink -f $(which gradle)))/../)
 
 export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
