@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
-#Add /usr/local/sbin to path
-if [ -d $(brew --prefix)/sbin ]; then
-  export PATH="$(brew --prefix)/sbin:$PATH"
-fi
 
 #Add /usr/local/bin to path
 if [ -d $(brew --prefix)/bin ]; then
   export PATH="$(brew --prefix)/bin:$PATH"
+fi
+
+#Add /usr/local/sbin to path
+if [ -d $(brew --prefix)/sbin ]; then
+  export PATH="$(brew --prefix)/sbin:$PATH"
 fi
 
 #Add coreutils to path
