@@ -10,7 +10,9 @@ export GRADLE_HOME=$(readlink -f $(brew --prefix gradle))/libexec
 
 export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
-export AWS_RDS_HOME="$(readlink -f $(brew --prefix rds-command-line-tools))/libexec"
+export AWS_RDS_HOME="/usr/local/opt/rds-command-line-tools/libexec"
+export AWS_IAM_HOME="/usr/local/opt/aws-iam-tools/libexec"
+export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
 
 
 # Make vim the default editor
