@@ -14,6 +14,8 @@ export AWS_RDS_HOME="/usr/local/opt/rds-command-line-tools/libexec"
 export AWS_IAM_HOME="/usr/local/opt/aws-iam-tools/libexec"
 export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
 
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
 
 # Make vim the default editor
 export EDITOR="/usr/local/bin/mate -w"
@@ -39,7 +41,6 @@ export GREP_OPTIONS="--color=auto"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 export GEM_HOME=/usr/local/Cellar/gems
-export PATH=$PATH:$GEM_HOME/bin
 
 export MAVEN_OPTS="-Xss4m -Xmx2048m -Xms2048m -XX:MaxPermSize=1024m -XX:PermSize=1024m"
 export GRADLE_OPTS="-Xss4m -Xmx2048m -Xms2048m -XX:MaxPermSize=1024m -XX:PermSize=1024m"

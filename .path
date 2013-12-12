@@ -15,3 +15,5 @@ fi
 if [ -d $(brew --prefix coreutils)/libexec/gnubin ]; then
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 fi
+
+export PATH=$GEM_HOME/bin:$PATH
