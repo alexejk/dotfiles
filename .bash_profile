@@ -55,3 +55,4 @@ fi
 
 #Git completitions BASH additions
 source ~/.gitcompletition
+
