@@ -20,3 +20,5 @@ fi
 if [ -d $GEM_HOME ]; then
   export PATH=$GEM_HOME/bin:$PATH
 fi
+
+launchctl setenv PATH $PATH
