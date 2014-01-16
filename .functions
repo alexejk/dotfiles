@@ -3,7 +3,7 @@ function gradle() {
     if [[ -x "gradlew" ]]; then
         ./gradlew "$@"
     else
-        gradle "$@"
+        $GRADLE_HOME/bin/gradle "$@"
     fi
 }
 
