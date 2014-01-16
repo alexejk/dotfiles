@@ -172,3 +172,6 @@ Icon
 
 
 #EOF
+
+#Do not ignore gradle wrapper
+!gradle/wrapper/gradle-wrapper.jar
