@@ -7,7 +7,9 @@ export AAS_CONFIG_DIR=/conf
 export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk/
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 export GRADLE_HOME=/usr/local/opt/gradle/libexec
+export MAVEN_HOME=/usr/local/opt/maven/libexec
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
+export ANT_HOME=/usr/local/opt/ant/libexec
 export AWS_RDS_HOME=/usr/local/opt/rds-command-line-tools/libexec
 export AWS_IAM_HOME=/usr/local/opt/aws-iam-tools/libexec
 export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
@@ -51,9 +53,11 @@ export GRADLE_OPTS="-Xss4m -Xmx2048m -Xms2048m -XX:MaxPermSize=1024m -XX:PermSiz
 launchctl setenv PATH $PATH
 launchctl setenv AAS_CONFIG_DIR $AAS_CONFIG_DIR
 launchctl setenv MAVEN_OPTS "$MAVEN_OPTS"
+launchctl setenv MAVEN_HOME "$MAVEN_HOME"
 launchctl setenv GRADLE_OPTS "$GRADLE_OPTS"
 launchctl setenv ANDROID_SDK_ROOT "$ANDROID_SDK_ROOT"
 launchctl setenv ANDROID_HOME "$ANDROID_HOME"
 launchctl setenv JAVA_HOME "$JAVA_HOME"
+launchctl setenv ANT_HOME "$ANT_HOME"
 launchctl setenv GRADLE_HOME "$GRADLE_HOME"
 launchctl setenv GROOVY_HOME "$GROOVY_HOME"
