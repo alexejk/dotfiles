@@ -53,6 +53,8 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
+ulimit -S -n 2048
+
 #Git completitions BASH additions
 source ~/.gitcompletition
 
