@@ -1,10 +1,10 @@
 #List installed Java versions
-function java_ls() {
+function jls() {
     /usr/libexec/java_home -V 2>&1 | grep -E "\d.\d.\d" | cut -d , -f 1 | colrm 1 4 | grep -v Home
 }
 
 #Change active java version
-function java_use() {
+function jset() {
     local isLink=false
     if ! [ "x$JAVA_HOME" = "x" ]; then
         if [ -h $JAVA_HOME ]; then
@@ -15,6 +15,8 @@ function java_use() {
                 isLink=true
             fi
         fi
+    else
+        echo "JAVA_HOME env variable not set. It will be exported for this session but will be lost after restart"
     fi
 
     local newHome=$(/usr/libexec/java_home -v $1)
