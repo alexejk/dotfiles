@@ -5,9 +5,25 @@ function java_ls() {
 
 #Change active java version
 function java_use() {
-    local home=$JAVA_HOME
-    sudo unlink $home
-    sudo ln -s $home `/usr/libexec/java_home -v $1`
+    local isLink=false
+    if ! [ "x$JAVA_HOME" = "x" ]; then
+        if [ -h $JAVA_HOME ]; then
+            isLink=true
+            sudo unlink $JAVA_HOME
+        else 
+            if ! [ -e "$JAVA_HOME" ]; then
+                isLink=true
+            fi
+        fi
+    fi
+
+    local newHome=$(/usr/libexec/java_home -v $1)
+    if $isLink; then
+        sudo ln -s $newHome $JAVA_HOME
+    else
+        export JAVA_HOME=$newHome
+    fi
+    
     java -version
 }
 
