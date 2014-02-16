@@ -1,3 +1,16 @@
+#List installed Java versions
+function java_ls() {
+    /usr/libexec/java_home -V 2>&1 | grep -E "\d.\d.\d" | cut -d , -f 1 | colrm 1 4 | grep -v Home
+}
+
+#Change active java version
+function java_use() {
+    local home=$JAVA_HOME
+    sudo unlink $home
+    sudo ln -s $home `/usr/libexec/java_home -v $1`
+    java -version
+}
+
 # Use gradle wrapper
 function gradle() {
     if [[ -x "gradlew" ]]; then
