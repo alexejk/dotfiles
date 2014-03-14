@@ -43,7 +43,9 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+nb-project.xml
 private/
+.nb-gradle
 
 # Eclipse hell
 *.pydevproject
@@ -59,6 +61,8 @@ tmp/**/*
 local.properties
 .settings/
 .loadpath
+.classpath
+.project
 
 #IDEA
 ## Directory-based project format
