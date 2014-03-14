@@ -43,6 +43,7 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+private/
 
 # Eclipse hell
 *.pydevproject
