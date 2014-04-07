@@ -58,3 +58,6 @@ ulimit -S -n 2048
 #Git completitions BASH additions
 source ~/.gitcompletition
 
+#Import them SSH keys
+ssh-add ~/.ssh/accedo_aws.pem > /dev/null 2>&1
+
