@@ -1,6 +1,6 @@
 # Java and Tomcat home
 export JAVA_HOME=/Library/Java/Home
-export CATALINA_HOME=/Library/Tomcat/Home
+export CATALINA_HOME=/usr/local/opt/tomcat/libexec
 export TOMCAT_HOME=$CATALINA_HOME
 export NODE_PATH=/usr/local/lib/node_modules
 export AAS_CONFIG_DIR=/conf
@@ -9,6 +9,7 @@ export ANDROID_HOME=$ANDROID_SDK_ROOT
 export GRADLE_HOME=/usr/local/opt/gradle/libexec
 export MAVEN_HOME=/usr/local/opt/maven/libexec
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
+export GLASSFISH_HOME=/usr/local/opt/glassfish/libexec
 export ANT_HOME=/usr/local/opt/ant/libexec
 export AWS_RDS_HOME=/usr/local/opt/rds-command-line-tools/libexec
 export AWS_IAM_HOME=/usr/local/opt/aws-iam-tools/libexec
@@ -22,7 +23,7 @@ export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 
 # Make vim the default editor
-export EDITOR="/usr/local/bin/mate -w"
+export EDITOR="/usr/bin/subl -w"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
@@ -48,6 +49,7 @@ export GEM_HOME=/usr/local/Cellar/gems
 
 export MAVEN_OPTS="-Xss4m -Xmx2048m -Xms2048m -XX:MaxPermSize=1024m -XX:PermSize=1024m"
 export GRADLE_OPTS="-Xss4m -Xmx2048m -Xms2048m -XX:MaxPermSize=1024m -XX:PermSize=1024m"
+export JAVA_TOOLS_OPTS="-Djava.awt.headless=true"
 
 #Ensure GUI apps get this
 launchctl setenv PATH $PATH
@@ -61,3 +63,6 @@ launchctl setenv JAVA_HOME "$JAVA_HOME"
 launchctl setenv ANT_HOME "$ANT_HOME"
 launchctl setenv GRADLE_HOME "$GRADLE_HOME"
 launchctl setenv GROOVY_HOME "$GROOVY_HOME"
+launchctl setenv TOMCAT_HOME "$TOMCAT_HOME"
+launchctl setenv CATALINA_HOME "$CATALINA_HOME"
+launchctl setenv GLASSFISH_HOME "$GLASSFISH_HOME"
