@@ -22,7 +22,7 @@ export EC2_CERT="$(if [ -f $HOME/.ec2/cert-*.pem ]; then echo $(/bin/ls $HOME/.e
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 
-# Make vim the default editor
+# Make sublime the default editor
 export EDITOR="/usr/bin/subl -w"
 
 # Don’t clear the screen after quitting a manual page
