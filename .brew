@@ -6,8 +6,8 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# Install Bash-Completition 2
-brew install bash-completition2
+# Install Bash-Completition
+brew install bash-completion
 
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
