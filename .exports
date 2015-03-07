@@ -17,6 +17,7 @@ export AWS_IAM_HOME=/usr/local/opt/aws-iam-tools/libexec
 export AWS_AUTO_SCALING_HOME="/usr/local/opt/auto-scaling/libexec"
 export EC2_HOME="/usr/local/opt/ec2-api-tools/libexec"
 export EC2_AMITOOL_HOME="/usr/local/påt/ec2-ami-tools/libexec"
+export MONO_GAC_PREFIX="/usr/local"
 
 export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
 

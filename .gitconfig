@@ -72,3 +72,5 @@
     name=Alexej Kubarev
     email=alexej.kubarev@accedo.tv
     signingkey=F615F3BB
+[rerere]
+	enabled = true
