@@ -19,9 +19,6 @@
 # hostname to whether the last call exited with an error to whether background
 # jobs are running in this shell will all be displayed automatically when
 # appropriate.
-
-
-DEFAULT_USER='Alexej'
  
 ### Segment drawing
 # A few utility functions to make it easy and re-usable to draw segmented prompts
