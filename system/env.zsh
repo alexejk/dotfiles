@@ -4,6 +4,3 @@ export LANG="en_US"
 
 # Editor
 export EDITOR='subl -w'
-
-# ulimit settings
-ulimit -n 16384
