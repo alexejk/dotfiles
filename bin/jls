@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Lists available Java installations
+#
+/usr/libexec/java_home -V 2>&1 | grep -E "\d.\d.\d" | cut -d , -f 1 | colrm 1 4 | grep -v Home

@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Changes active java version
+#
+
+isLink=false
+if ! [ "x$JAVA_HOME" = "x" ]; then
+    if [ -h $JAVA_HOME ]; then
+        isLink=true
+        sudo unlink $JAVA_HOME
+    else 
+        if ! [ -e "$JAVA_HOME" ]; then
+            isLink=true
+        fi
+    fi
+else
+    echo "JAVA_HOME env variable not set. It will be exported for this session but will be lost after restart"
+fi
+
+newHome=$(/usr/libexec/java_home -v $1)
+if $isLink; then
+    sudo ln -s $newHome $JAVA_HOME
+else
+    export JAVA_HOME=$newHome
+fi
+
+java -version

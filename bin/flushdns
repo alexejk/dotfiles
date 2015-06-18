@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# Flushes Directory Service cache
+#  - Note: OSX Yosemite Specific
+#  
+
+sudo dscacheutil -flushcache
+sudo discoveryutil mdnsflushcache
+sudo discoveryutil udnsflushcaches

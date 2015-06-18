@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# Gradle Helper
+#  - Allows running Gradle Wrapper by calling gradle instead of gradlew
+#
+
+if [[ -x "gradlew" ]]; then
+    ./gradlew "$@"
+else
+    $GRADLE_HOME/bin/gradle "$@"
+fi
