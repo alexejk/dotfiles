@@ -5,5 +5,4 @@
 #  
 
 sudo dscacheutil -flushcache
-sudo discoveryutil mdnsflushcache
-sudo discoveryutil udnsflushcaches
+sudo killall -HUP mDNSResponder
