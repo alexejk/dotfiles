@@ -5,6 +5,6 @@ then
 fi
 
 # Load dircolors settings
-if [[ ! -a ~/.dir_colors ]]; then
+if [[ -a ~/.dir_colors ]]; then
     eval `dircolors ~/.dir_colors`
 fi
