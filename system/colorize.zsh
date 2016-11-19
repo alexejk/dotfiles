@@ -9,5 +9,9 @@ if [[ -a ~/.dir_colors ]]; then
   if (( $+commands[dircolors] ))
   then
     eval `dircolors ~/.dir_colors`
+  else 
+    if (( $+commands[gdircolors] )) then
+      eval `gdircolors ~/.dir_colors`
+    fi
   fi
 fi
