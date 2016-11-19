@@ -3,4 +3,4 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 # Editor
-export EDITOR='atom -w'
+export EDITOR='code -w'

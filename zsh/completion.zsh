@@ -6,3 +6,5 @@ zstyle ':completion:*' insert-tab pending
 
 # allow cd to ..
 zstyle ':completion:*' special-dirs true
+
+fpath=(/usr/local/share/zsh-completions $fpath)
