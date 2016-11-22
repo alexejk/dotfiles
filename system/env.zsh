@@ -3,4 +3,10 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 # Editor
-export EDITOR='code -w'
+if (( $+commands[code] ))
+then
+  export EDITOR='code -w'
+else
+  export EDITOR='vi'
+fi
+
