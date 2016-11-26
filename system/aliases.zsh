@@ -1,3 +1,8 @@
+alias x=exit
+alias c=clear
+alias s=screen
+alias r='screen -R'
+
 # System aliases
 if [[ $OSTYPE == darwin* ]];
 then
