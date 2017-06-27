@@ -5,7 +5,7 @@ export LANG="en_US"
 # Editor
 if (( $+commands[code] ))
 then
-  export EDITOR='code -w'
+  export EDITOR='code --wait'
 else
   export EDITOR='vi'
 fi

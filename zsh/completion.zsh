@@ -8,3 +8,5 @@ zstyle ':completion:*' insert-tab pending
 zstyle ':completion:*' special-dirs true
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+source /usr/local/share/zsh/site-functions/_awless
