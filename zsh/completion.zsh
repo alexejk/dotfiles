@@ -9,4 +9,6 @@ zstyle ':completion:*' special-dirs true
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-source /usr/local/share/zsh/site-functions/_awless
+if [[ -a /usr/local/share/zsh/site-functions/_awless ]]; then
+  source /usr/local/share/zsh/site-functions/_awless
+fi
