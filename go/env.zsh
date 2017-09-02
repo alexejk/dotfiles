@@ -1,5 +1,6 @@
 if (( $+commands[go] )) 
 then
+    unset GOROOT # Unset it to ensure go env does not provide faulty result
     export GOROOT=`go env GOROOT`
 fi
 
