@@ -10,6 +10,10 @@ zstyle ':completion:*' menu select
 # allow cd to ..
 zstyle ':completion:*' special-dirs true
 
+zstyle ':completion:*:messages' format '%d'
+zstyle ':completion:*:corrections' format '%B%d (errors: %e)%b'
+zstyle ':completion:*' group-name ''
+
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 if [[ -a /usr/local/share/zsh/site-functions/_awless ]]; then
