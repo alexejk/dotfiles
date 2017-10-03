@@ -4,6 +4,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # pasting with tabs doesn't perform completion
 zstyle ':completion:*' insert-tab pending
 
+# Highlight autocomplete and allow menu navigation
+zstyle ':completion:*' menu select
+
 # allow cd to ..
 zstyle ':completion:*' special-dirs true
 
