@@ -1,0 +1,4 @@
+#!/bin/sh
+# Vizualize dot file and open OSX Preview App
+
+dot -T png | open -f -a /Applications/Preview.app
